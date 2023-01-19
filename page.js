@@ -40,12 +40,12 @@ const quizData = [
         correct: "a",
     },
     {
-        question: "Frage 6",
-        a: "Antwort 1",
-        b: "Antwort 2",
-        c: "Antwort 3",
-        d: "Antwort 4",
-        correct: "b",
+        question: "Welches Buch startete seinen 'durchbruch' ",
+        a: "Kritik der reinen Vernunft",
+        b: "Gedanken von der wahren Schätzung der lebendigen Kraft.",
+        c: "Allgemeine Naturgeschichte und Theorie des Himmels",
+        d: "Kritik der praktischen Vernunft",
+        correct: "a",
     },
     {
         question: "Frage 7",
