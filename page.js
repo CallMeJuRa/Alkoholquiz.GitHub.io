@@ -125,7 +125,7 @@ submitBtn.addEventListener('click', () => {
        } else {
            quiz.innerHTML = `
            <h2>Du hast ${score} von ${quizData.length} Fragen richtig. GeGe</h2>
-           <button onclick="location.reload()">Reload</button>
+           <button onclick="location.reload()">Neustart</button>
            `
        }
     }
