@@ -1,13 +1,15 @@
 const quizData = [
-    {
-        question: "Wann wurde Immanuel Kant geboren?",
+    {   number: "1",
+        question: " 1. Wann wurde Immanuel Kant geboren?",
         a:"22. Februar 1825",
         b:"12. Februar 1804",
         c:"22. April 1724",
         d:"25 vor Christus",
         correct: "c",
+        wrong: "a",
     },
     {
+        number: "2",
         question: "Frage 2",
         a: "Antwort 1",
         b: "Antwort 2",
@@ -16,6 +18,7 @@ const quizData = [
         correct: "b",
     },
     {
+        number: "3",
         question: "Frage 3",
         a: "Antwort 1",
         b: "Antwort 2",
@@ -24,6 +27,7 @@ const quizData = [
         correct: "c",
     },
     {
+        number: "4",
         question: "Frage 4",
         a: "Antwort 1",
         b: "Antwort 2",
@@ -32,6 +36,7 @@ const quizData = [
         correct: "d",
     },
     {
+        number: "5",
         question: "Frage 5",
         a: "Antwort 1",
         b: "Antwort 2",
@@ -40,7 +45,8 @@ const quizData = [
         correct: "a",
     },
     {
-        question: "Welches Buch startete seinen 'durchbruch' ",
+        number: "6",
+        question: "6. Welches Buch startete seinen 'durchbruch' ",
         a: "Kritik der reinen Vernunft",
         b: "Gedanken von der wahren Schätzung der lebendigen Kraft.",
         c: "Allgemeine Naturgeschichte und Theorie des Himmels",
@@ -48,6 +54,7 @@ const quizData = [
         correct: "a",
     },
     {
+        number: "7",
         question: "Frage 7",
         a: "Antwort 1",
         b: "Antwort 2",
@@ -56,6 +63,7 @@ const quizData = [
         correct: "c",
     },
    {
+        number: "8",
         question: "Frage 8",
          a: "Antwort 1",
          b: "Antwort 2",
@@ -64,6 +72,7 @@ const quizData = [
          correct: "d",
     },
     {
+        number: "9",
         question: "Frage 9",
         a: "Antwort 1",
         b: "Antwort 2",
@@ -72,12 +81,14 @@ const quizData = [
         correct: "a",
     },
     {
+        number: "10",
         question: "Frage 10",
         a: "Antwort 1",
         b: "Antwort 2",
         c: "Antwort 3",
         d: "Antwort 4",
         correct: "b",
+        
                                     },
 ]
 
@@ -91,6 +102,7 @@ const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 let currentQuiz = 0
 let score = 0
+let wrongAnswer = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
 loadQuiz()
 function loadQuiz() {
     deselectAnswers()
@@ -118,13 +130,18 @@ submitBtn.addEventListener('click', () => {
     if(answer) {
        if(answer === quizData[currentQuiz].correct) {
            score++
-       }
+       } 
+
+      
+
        currentQuiz++
        if(currentQuiz < quizData.length) {
            loadQuiz()
        } else {
            quiz.innerHTML = `
-           <h2>Du hast ${score} von ${quizData.length} Fragen richtig. GeGe</h2>
+           <h2>Du hast ${score} von ${quizData.length} Fragen richtig. GeGe <br>
+           Du hast folgende Fragen falsch:
+           <ul> <li> ${wrongAnswer} </li>   </ul>   </h2>
            <button onclick="location.reload()">Neustart</button>
            `
        }
