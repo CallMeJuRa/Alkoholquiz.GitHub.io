@@ -95,6 +95,8 @@ const quizData = [
         question:"11. Er schrieb das Buch 'Allgemeine Naturgeschichte und Theorie des Himmels'",
         a:"Wahr",
         b:"Falsch",
+         c:"///",
+        d:"///",
         correct:"a",
     },
     {
@@ -102,6 +104,8 @@ const quizData = [
         question:"12. Er war Atheistisch (War unreligiös)",
         a:"Wahr",
         b:"Falsch",
+         c:"///",
+        d:"///",
         correct:"a",
     },
     {
@@ -109,6 +113,8 @@ const quizData = [
         question:"13. Der Kategorischer Imperativ ist aufgelistet in der 'Kritik der reinen Vernunft'",
         a:"Wahr",
         b:"Falsch",
+         c:"///",
+        d:"///",
         correct:"b",
     },
     {
@@ -116,6 +122,8 @@ const quizData = [
         question:"14. Er zog nicht aus Königsberg aus",
         a:"Wahr",
         b:"Falsch",
+         c:"///",
+        d:"///",
         correct:"b",
     },
     {
@@ -123,6 +131,8 @@ const quizData = [
         question:"15. 'Die Allgemeine Naturgeschichte und Theorie des Himmels' war sein erstes Buch",
         a:"Wahr",
         b:"Falsch",
+         c:"///",
+        d:"///",
         correct:"b",
     },
 
