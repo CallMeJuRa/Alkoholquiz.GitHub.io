@@ -182,15 +182,24 @@ submitBtn.addEventListener('click', () => {
        }      else {
         wrongAnswer.push(quizData[currentQuiz].number);  
        }
-
+       if(quizData[currentQuiz].number === "10") {
+        DeleteAnswers()
+    }
        currentQuiz++
        if(currentQuiz < quizData.length) {
            loadQuiz()
+
        } else {
         End()
        }
     }
 })
+    
+
+    
+
+
+
 
 function End() {
     if(wrongAnswer.length > 1) {
@@ -217,3 +226,14 @@ function End() {
        `
         }
 }
+
+    function DeleteAnswers() {
+        let AnswerC = document.getElementById('c') // Answer und Circle müssten eig den anderen Tag nehmen
+        let AnswerD = document.getElementById('d')
+        let CircleC = document.getElementById('c_text')
+        let CircleD = document.getElementById('d_text')
+        AnswerC.remove()
+        AnswerD.remove()
+        CircleC.remove()
+        CircleD.remove()
+    }
