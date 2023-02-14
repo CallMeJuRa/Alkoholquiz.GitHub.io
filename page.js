@@ -56,7 +56,7 @@ const quizData = [
     {
         number: "7",
         question: "7. Was ist die 'Erkenntnistheorie'?",
-        a: "Wie man die Wekt sieht",
+        a: "Wie man die Welt sieht",
         b: "Antworten seiner Fragen im Buch der reinen Vernunft",
         c: "Antworten seiner Fragen im Buch der praktischen Vernunft",
         d: "Antworten der Fragen in der Bibel und dem alten Testament",
