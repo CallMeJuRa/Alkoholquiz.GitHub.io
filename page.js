@@ -1,10 +1,10 @@
 const quizData = [
     {   number: "1",
         question: " 1. Wo liegt die Promillegrenze in Deutschland (ohne Ordnungswidrigkeit)", // Wer das sieht hat smoll PP
-        a:">0,15",
-        b:">1,1",
-        c:">0,5",
-        d:">0,7",
+        a:"< 0,15",
+        b:"< 1,1",
+        c:"< 0,5",
+        d:"< 0,7",
         correct: "c",
        
     },
@@ -32,12 +32,12 @@ const quizData = [
         a: "ein Bußgeld und entzogenen Führerschein (3 Monate)",
         b: "eine Freiheitsstrafe",
         c: "ein Bußgeld von 10 Tagesverdiensten und Fahrverbot",
-        d: "Eine Freiheits— oder Geldstrafe und entziehung des Führerscheins für min. 6 Monate",
+        d: "Eine Freiheits- oder Geldstrafe und entziehung des Führerscheins für min. 6 Monate",
         correct: "d",
     },
     {
         number: "5",
-        question: "5. Welche Länder haben die Gleichen Strafen für Verstoß der Grenze?",
+        question: "5. Welche Länder haben die Gleichen Strafen für Verstoß der Grenze wie Deutschland?",
         a: "Österreich, Frankreich",
         b: "Kein Land",
         c: "Polen, Niederlande",
@@ -46,7 +46,7 @@ const quizData = [
     },
     {
         number: "6",
-        question: "6. Welchen Wert für die Promillegrenze findet man häufiger in den EU—Staaten? ",
+        question: "6. Welchen Wert für die Promillegrenze findet man häufiger in den EU-Staaten? ",
         a: "0,5‰",
         b: "0,19‰",
         c: "0,2 ‰",
@@ -58,83 +58,38 @@ const quizData = [
         question: "7. Was geschieht wenn man den Atemtest verweigert?",
         a: "Man darf nicht weiter fahren, jedoch wird man in Ruhe gelassen",
         b: "Man muss auf der Wache einen vom Artz durchgeführten Bluttest vollziehen",
-        c: "Antworten seiner Fragen im Buch der praktischen Vernunft",
-        d: "Antworten der Fragen in der Bibel und dem alten Testament",
+        c: "Man erhält eine Freiheitsstrafe von 2 Monaten",
+        d: "Gerichtlicher Prozess wird eingeleitet und führt zu einer Geldstrafe",
         correct: "b",
     },
    {
         number: "8",
-        question: "8. Welcher Spruch ist nicht von Kant?",
-         a: "Was du nicht willst, das man dir tu' das füg auch keinem anderem zu",
-         b: "Handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, dass sie ein allgemeines Gesetzt werde",
-         c: "Die Fähigkeit, mit ihrer Vernunft zwischen Recht und Unrecht zu unterscheiden, ist allen Menschen angeboren",
-         d: "Zwei Dinge erfüllen das Gemüt mit Ehrfurcht: der bestirnte Himmel über mir und das moralische Gesetz in mir.",
+        question: "8. Die Promille-Grenze war schon immer bei 0,5‰",
+         a: "Wahr",
+         b: "Falsch",
+         c: "/////",
+         d: "/////",
          correct: "a",
     },
     {
         number: "9",
-        question: "9. Wieso erhielt Kant 1793 Lehr- und Publikationsverbot über das Thema Religion?",
-        a: "Der Regierung passte seine Ansicht nicht",
-        b: "Er veränderte die Bibel",
-        c: "Er beinflusste extra Kinder nicht gläubig zu sein",
-        d: "Der Regierung wollte Streit",
-        correct: "a",
+        question: "9. Man unterscheidet nicht zwischen absoluter und relativer Fahruntüchtigkeit.",
+         a: "Wahr",
+         b: "Falsch",
+         c: "/////",
+         d: "/////",
+         correct: "b",
     },
     {
         number: "10",
-        question: "10. Was ist seine Definition von Aufklärung?",
-        a: "Die entstehung des Menschen",
-        b: "Es sei der Ausweg aus dem eigenem Schweigen",
-        c: "Gott sei nicht echt",
-        d: "Wie Kinder entstehen",
-        correct: "b",
-        
-    },
-    {
-        number:"11",
-        question:"11. Er schrieb das Buch 'Allgemeine Naturgeschichte und Theorie des Himmels'",
-        a:"Wahr",
-        b:"Falsch",
-         c:"///",
-        d:"///",
-        correct:"a",
-    },
-    {
-        number:"12",
-        question:"12. Er war Atheistisch (War unreligiös)",
-        a:"Wahr",
-        b:"Falsch",
-         c:"///",
-        d:"///",
-        correct:"a",
-    },
-    {
-        number:"13",
-        question:"13. Der Kategorischer Imperativ ist aufgelistet in der 'Kritik der reinen Vernunft'",
-        a:"Wahr",
-        b:"Falsch",
-         c:"///",
-        d:"///",
-        correct:"b",
-    },
-    {
-        number:"14",
-        question:"14. Er zog nicht aus Königsberg aus",
-        a:"Wahr",
-        b:"Falsch",
-         c:"///",
-        d:"///",
-        correct:"b",
-    },
-    {
-        number:"15",
-        question:"15. 'Die Allgemeine Naturgeschichte und Theorie des Himmels' war sein erstes Buch",
-        a:"Wahr",
-        b:"Falsch",
-         c:"///",
-        d:"///",
-        correct:"b",
-    },
+        question: "10.Gesetzlich wird der Alkhol nur im Blut, Urin und in den Haaren kontrolliert.",
+         a: "Wahr",
+         b: "Falsch",
+         c: "/////",
+         d: "/////",
+         correct: "a",
+    }
+    
 
 ]
 
@@ -182,7 +137,7 @@ submitBtn.addEventListener('click', () => {
        }      else {
         wrongAnswer.push(quizData[currentQuiz].number);  
        }
-       if(quizData[currentQuiz].number === "10") {
+       if(quizData[currentQuiz].number === "7") {
         DeleteAnswers()
     }
        currentQuiz++
@@ -204,7 +159,7 @@ submitBtn.addEventListener('click', () => {
 function End() {
     if(wrongAnswer.length > 1) {
         quiz.innerHTML = `
-   <h2>Du hast ${score} von ${quizData.length} Fragen richtig. GeGe <br>
+   <h2>Glückwunsch, du hast ${score} von ${quizData.length} Fragen richtig! <br>
    Du hast folgende Fragen falsch:
    <ul> <li> ${wrongAnswer} </li>   </ul>   </h2>
    <button onclick="location.reload()">Neustart</button>
